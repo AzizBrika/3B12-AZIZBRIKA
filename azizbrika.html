@@ -47,7 +47,6 @@
                 </td>
             </tr>
         </table>
-  
     </section>
 
     <section id="Parcours-academiques" style="margin: 20px; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
@@ -93,7 +92,6 @@
                 </td>
             </tr>
         </table>
-        
     </section>
 
     <section id="Experiences" style="margin: 20px; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
@@ -109,7 +107,6 @@
                 </td>
             </tr>
         </table>
-        
     </section>
 
     <section id="Competences" style="margin: 20px; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
@@ -127,7 +124,6 @@
                 </td>
             </tr>
         </table>
-        
     </section>
 
     <section id="Projets-personnels" style="margin: 20px; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
@@ -155,10 +151,8 @@
                     </table>
                     <li>L'objectif du projet TechNestHub est de créer une communauté en ligne dynamique et collaborative axée sur la technologie, visant à stimuler l'innovation, à faciliter l'apprentissage continu et à favoriser la connectivité entre les passionnés de technologie.</li>
                 </td>
-             
             </tr>
         </table>
-        
     </section>
 
     <section id="Langues" style="margin: 20px; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
@@ -189,7 +183,6 @@
                 </td>
             </tr>
         </table>
-        
     </section>
 
     <section id="Contact" style="margin: 20px; background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
@@ -226,14 +219,41 @@
                 </td>
             </tr>
         </table>
-        
     </section>
+    
     <div style="height: 50px;"></div>
     <footer style="background-color: #333; color: white; text-align: center; padding: 5px; position: fixed; bottom: 0; width: 100%;">
         <h5>Tél : 29 213 292</h5>
         <h5>Adresse : 35 Rue de la Paix, Radés</h5>
     </footer>
-    
+
+    <script>
+        // Code JavaScript pour le défilement fluide
+        document.addEventListener("DOMContentLoaded", function () {
+            // Sélectionnez tous les liens de navigation internes
+            var navLinks = document.querySelectorAll('nav a');
+
+            // Ajoutez un gestionnaire d'événements à chaque lien
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Obtenez l'identifiant de la section liée au lien
+                    var targetId = link.getAttribute('href').substring(1);
+
+                    // Obtenez la section cible
+                    var targetSection = document.getElementById(targetId);
+
+                    // Faites défiler la page jusqu'à la section cible
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
